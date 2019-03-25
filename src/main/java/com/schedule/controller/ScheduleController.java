@@ -17,6 +17,12 @@ public class ScheduleController {
     @Autowired
     private Scheduler scheduler;
 
+    /**
+     * 修改时间
+     * @param second
+     * @return
+     * @throws SchedulerException
+     */
     @GetMapping("/update/{second}")
     @ResponseBody
     public String update(@PathVariable(name = "second") String second) throws SchedulerException {
