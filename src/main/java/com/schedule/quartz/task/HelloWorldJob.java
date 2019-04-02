@@ -16,6 +16,8 @@ import static java.lang.Thread.sleep;
 public class HelloWorldJob implements Job {
     @Override
     public void execute(JobExecutionContext arg0) throws JobExecutionException {
+        System.out.println("欢迎使用,这是一个定时任务!" + DateUtils.fullTime(new Date()));
+        /*
         for(int i=0; i<60; i++) {
             try {
                 sleep(1000);
@@ -24,5 +26,6 @@ public class HelloWorldJob implements Job {
             }
             System.out.println("欢迎使用,这是一个定时任务!"+i + DateUtils.fullTime(new Date()));
         }
+         */
     }
 }
